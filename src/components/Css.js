@@ -9,7 +9,6 @@ class Css extends AutomaticComponent {
             {
                 test: /\.css$/,
                 loaders: [
-                    'style-loader',
                     { loader: 'css-loader', options: { importLoaders: 1 } },
                     {
                         loader: 'postcss-loader',
@@ -22,7 +21,6 @@ class Css extends AutomaticComponent {
                 test: /\.scss$/,
                 exclude: this.excludePathsFor('sass'),
                 loaders: [
-                    'style-loader',
                     'css-loader',
                     {
                         loader: 'postcss-loader',
@@ -44,7 +42,6 @@ class Css extends AutomaticComponent {
                 test: /\.sass$/,
                 exclude: this.excludePathsFor('sass'),
                 loaders: [
-                    'style-loader',
                     'css-loader',
                     {
                         loader: 'postcss-loader',
@@ -67,7 +64,6 @@ class Css extends AutomaticComponent {
                 test: /\.less$/,
                 exclude: this.excludePathsFor('less'),
                 loaders: [
-                    'style-loader',
                     'css-loader',
                     {
                         loader: 'postcss-loader',
